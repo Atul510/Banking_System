@@ -40,3 +40,11 @@ bool isValidIFSC(string ifsc){
     
     return true;
 }
+
+bool isValidName(string name){
+    for(int i=0; i<name.length(); i++){
+        if(!isalpha(name[i]) && name[i] != ' ')
+            return false;
+    }
+    return true;
+}
