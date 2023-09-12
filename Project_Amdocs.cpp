@@ -32,9 +32,15 @@ public:
 
     void getDetails(){
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        cout<<"Enter your Name: ";
         // cin.ignore();
-        getline(cin,name);
+        while(true){
+            cout<<"Enter your Name: ";
+            getline(cin,name);
+            if(isValidName(name))
+                break;
+            else
+                cout<<"Enter Valid name!!!\n";
+        }
         cout<<"Enter your PAN: ";
         while(true){
             cin >> pan;
@@ -46,6 +52,7 @@ public:
             }
             else 
                 cout << "Invalid PAN. Please enter a valid PAN: ";
+            
         }
     }
     
@@ -100,9 +107,15 @@ public:
 
     void getDetails(){
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        cout<<"Enter your Name: ";
         // cin.ignore();
-        getline(cin, name);
+        while(true){
+            cout<<"Enter your Name: ";
+            getline(cin,name);
+            if(isValidName(name))
+                break;
+            else
+                cout<<"Enter Valid name!!!\n";
+        }
 
         cout<<"Enter your PAN: ";
         while(true){
