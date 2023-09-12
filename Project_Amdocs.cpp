@@ -38,8 +38,12 @@ public:
         cout<<"Enter your PAN: ";
         while(true){
             cin >> pan;
-            if (isValidPAN(pan)) 
+            if (isValidPAN(pan)) {
+                for (int i = 0; i < pan.length(); i++) {
+                    pan[i] = toupper(pan[i]);
+                }
                 break;
+            }
             else 
                 cout << "Invalid PAN. Please enter a valid PAN: ";
         }
@@ -103,8 +107,12 @@ public:
         cout<<"Enter your PAN: ";
         while(true){
             cin >> pan;
-            if (isValidPAN(pan)) 
+            if (isValidPAN(pan)) {
+                for (int i = 0; i < pan.length(); i++) {
+                    pan[i] = toupper(pan[i]);
+                }
                 break;
+            }
             else 
                 cout << "Invalid PAN. Please enter a valid PAN: ";
         }
